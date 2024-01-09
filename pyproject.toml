@@ -1,0 +1,39 @@
+[project]
+name = "scrapy-sentry"
+version = "1.1"
+description = "Sentry component for Scrapy"
+authors = [
+    {name = "Jordi Llonch", email = "llonchj@gmail.com"},
+]
+dependencies = [
+    'Scrapy>=1.4.0', 
+    'raven>=6.3.0', 
+    'six>=1.11.0'
+]
+requires-python = ">=3.5"
+readme = "README.md"
+license = {text = "BSD"}
+classifiers=[
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 2.6',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.3',
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'Environment :: Console',
+    'Topic :: Software Development :: Libraries :: Application Frameworks',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Internet :: WWW/HTTP',
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+package-type = "library"
