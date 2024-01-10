@@ -6,7 +6,7 @@ authors = [
     {name = "Jordi Llonch", email = "llonchj@gmail.com"},
 ]
 dependencies = [
-    'Scrapy>=1.4.0', 
+    'Scrapy>=2.0', 
     'raven>=6.3.0', 
     'six>=1.11.0'
 ]
