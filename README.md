@@ -7,8 +7,7 @@ A python library that glues [Sentry](http://www.getsentry.com) with [Scrapy](htt
 Any spider errors will get pushed to Sentry. Please note that currently, exceptions anywhere else (e.g. the Scrapy pipeline)
 are not being reported to Sentry.
 
-
-Requisites: 
+Requirements: 
 -----------
 
 * [Sentry server](http://www.getsentry.com/)
@@ -36,6 +35,32 @@ Example:
 
   ```
 
-Supported versions
-------------------
-This package works with Python 2.7, 3.4 and 3.5. It has been tested with Scrapy up to version 1.2.1.  
+Development
+-----
+
+1. Install [pipenv](https://pipenv.pypa.io/en/latest/) if you don't have it already.
+
+2. Enter the project directory:
+```
+cd scrapy-sentry
+```
+3. Copy 'env.example' to '.env':
+```
+cp env.example .env
+```
+4. Provide your Sentry DSN in .env:
+```
+SENTRY_DSN=<your-sentry-dsn>
+```
+5. Install project dependencies: 
+```
+pipenv install --dev
+```
+6. Create a virtual environment and activate it:
+```
+pipenv shell
+```
+7. Simulate a failed spider run:
+```
+scrapy crawl example
+```
