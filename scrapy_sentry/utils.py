@@ -62,7 +62,7 @@ def response_to_dict(response, spider, include_request=True, **kwargs):
         'body': response.body,
     }
     if include_request:
-        d['request'] = response.to_dict(spider=spider)
+        d['request'] = response.request.to_dict(spider=spider)
     return d
 
 
