@@ -12,7 +12,7 @@ BOT_NAME = 'example_project'
 SPIDER_MODULES = ['example_project.spiders']
 NEWSPIDER_MODULE = 'example_project.spiders'
 
-if os.environ.get("SENTRY_DSN", None) is None:
+if not os.environ.get("SENTRY_DSN"):
     import sys
     sys.stderr.write("Please define SENTRY_DSN in your environment "
                      "to run this example_project")
